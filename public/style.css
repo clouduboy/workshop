@@ -1,0 +1,54 @@
+html,body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  overflow:hidden;
+  background: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+canvas {
+  image-rendering: -moz-crisp-edges;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: pixelated;
+
+  width: 60vw;
+}
+
+button {
+  font-size: 0;
+  border: 5px solid #a0d;
+  background-color: #d0a;
+  padding: 30px;
+  margin: 10px;
+
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  
+  background-size: 80%;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  image-rendering: -moz-crisp-edges;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: pixelated;
+}
+
+button.compile {
+  background-image: url(https://cdn.glitch.com/12d2134a-eeea-40b9-b810-182d8ae246ab%2Fcompile-button.png?1529679484659);
+}
+button.paint {
+  background-image: url(https://cdn.glitch.com/12d2134a-eeea-40b9-b810-182d8ae246ab%2Fpaint-button.png?1529679484365);
+  right: 90px;
+}
+
+button:hover, button:focus, button:active {
+  border: 5px solid white;
+}
+
+button[disabled] {
+  opacity: .1;
+}
