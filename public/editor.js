@@ -48,7 +48,8 @@ function init() {
   pb.disabled = true
   document.body.appendChild(pb)
 
-  fetch('./game.js').then(r => r.text()).then(r => processSrc(r)).catch(e => console.log('Failed request:', e))
+  const jsfile = document.querySelector('script#game').src || '/game.js'
+  fetch(jsfile).then(r => r.text()).then(r => processSrc(r)).catch(e => console.log('Failed request:', e))
 }
 
 function btnCompile(e) {
@@ -57,7 +58,7 @@ function btnCompile(e) {
   )
 }
 function btnPaint(e) {
-  window.open(`https://create.clouduboy.org/painter/?pif=`+encodeURIComponent(gameGfx[1].pif.replace(/\n+/g, '|').replace(/#/g,'1')))
+  window.open(`https://create.clouduboy.org/painter/?pif=`+encodeURIComponent(gameGfx[gameGfx.length-1].pif.replace(/\n+/g, '|').replace(/#/g,'1')))
 }
 
 function processSrc(src) {
