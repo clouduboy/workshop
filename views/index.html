@@ -1,36 +1,48 @@
-<!-- This is a static file -->
-<!-- served from your routes in server.js -->
-
-<!-- You might want to try something fancier: -->
-<!-- html/nunjucks docs: https://mozilla.github.io/nunjucks/ -->
-<!-- pug: https://pugjs.org/ -->
-<!-- haml: http://haml.info/ -->
-<!-- hbs(handlebars): http://handlebarsjs.com/ -->
-
-<!DOCTYPE html>
+<!doctype html>
 <html>
-  <head>
-    <title>Welcome to Clouduboy!</title>
-    <meta name="description" content="Games on microcontrollers using Clouduboy & Glitch">
-    <link id="favicon" rel="icon" href="https://glitch.com/edit/favicon-app.ico" type="image/x-icon">
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="/style.css">
-  </head>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-  <body>
-    <canvas class="microcanvas" width="96" height="64"></canvas>
+	<title>Clouduboy</title>
+	<meta name="description" content="Games, web &amp; microcontrollers - the best of all three worlds helping you unleash your creativity!" />
+	<meta name="keywords" content=" clouduboy, javascript, microcontrollers, iot, html5, canvas, arduboy, tiny arcade, arduino, microbit, flaki" />
 
-    <!-- PixelData lib: https://clouduboy.github.io/microcanvas-pixeldata/explorer/ -->
-    <script src="https://clouduboy.github.io/microcanvas-pixeldata/pixeldata.js"></script>
-    <!-- MicroCanvas lib: https://clouduboy.github.io/microcanvas/ -->
-    <script src="https://clouduboy.github.io/microcanvas/microcanvas.js"></script>
-    <!-- Advanced editor features -->
-    <script src="/editor.js"></script>
+	<!-- Social: Twitter -->
+	<meta name="twitter:card" content="summary" />
+	<meta name="twitter:site" content="@clouduboy" />
 
-    
-    <!-- your game! -->
-    <script src="/game.js"></script>
-  </body>
+	<meta name="twitter:title" content="Clouduboy" />
+	<meta name="twitter:description" content="Games, web &amp; microcontrollers - the best of all three worlds helping you unleash your creativity!" />
+	<meta name="twitter:image:src" content="https://cdn.glitch.com/12d2134a-eeea-40b9-b810-182d8ae246ab%2Fclouduboy-icon-bg.png?1529808751166" />
+
+	<!-- Social: Facebook / Open Graph -->
+	<meta property="og:site_name" content="Clouduboy" />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://clouduboy.org/" />
+
+	<meta property="og:title" content="Clouduboy" />
+	<meta property="og:description" content="Games, web &amp; microcontrollers - the best of all three worlds helping you unleash your creativity!" />
+	<meta property="og:image" content="https://cdn.glitch.com/12d2134a-eeea-40b9-b810-182d8ae246ab%2Fclouduboy-icon-bg.png?1529808751166" />
+
+	<link rel="stylesheet" href="/index.css">
+</head>
+
+<body>
+  <header>
+    <img src="https://cdn.glitch.com/12d2134a-eeea-40b9-b810-182d8ae246ab%2Fclouduboy-icon-bg.png?1529808751166" alt="Clouduboy" title="Clouduboy" />
+  </header>
+  <h1>
+    <a href="/tutorial/">start tutorial!</a>
+  </h1>
+  <h1>
+    or select a game to play:
+  </h1>
+  <nav>
+    <ul><a href="/play/space-invaders" target="_blank">space invaders</a></ul>
+    <ul><a href="/play/dino-run" target="_blank">dino run</a></ul>
+    <ul><a href="/play/snake" target="_blank">snake</a></ul>
+  </nav>
+</body>
+
 </html>

@@ -1,0 +1,55 @@
+@keyframes bob {
+  from {
+    top: -.25rem;
+  }
+
+  to {
+    top: 1rem;
+  }
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: #a0a0fe;
+  color: white;
+  font-family: sans-serif;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+a {
+  font-weight: bold;
+  text-decoration: none;
+  color: #eddd31;
+  text-transform: capitalize;
+}
+a:hover, a:focus, a:active {
+  text-decoration: underline;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  padding: 2rem;
+  text-align: center;
+}
+
+header img {
+  width: 8rem;
+}
+
+header img {
+  position: relative;
+  animation: 2s ease-in-out infinite alternate-reverse bob;
+}
+
+ul {
+  padding: 0;
+}
