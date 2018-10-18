@@ -17,7 +17,7 @@ canvas {
   width: 60vw;
 }
 
-button {
+body > button {
   font-size: 0;
   border: 5px solid #a0d;
   background-color: #d0a;
@@ -49,6 +49,47 @@ button:hover, button:focus, button:active {
   border: 5px solid white;
 }
 
-button[disabled] {
+body > button[disabled] {
   opacity: .1;
+}
+
+
+
+.pixeledit {
+  position: absolute;
+  height: 10em;
+  background-color: rgba(0,0,0,.85);
+  border: 50vmax solid rgba(0,0,0,.85);
+}
+
+.pixeledit li {
+  width: 16em;
+  margin-bottom: .5em;
+}
+.pixeledit button {
+  width: 100%;
+  border: 5px solid rgba(96, 200, 0, 1);
+  background: rgba(128, 212, 60, 1);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.pixeledit button {}
+
+.pixeledit button svg {
+  height: 2em;
+  max-width: 4em;
+  flex-grow: 0;
+  margin: .25em;
+}
+
+.pixeledit button span {
+  display: block;
+  text-align: center;
+  font-weight: bold;
+  font-family: monospace;
+  font-size: .9em;
+  letter-spacing: -.025em;
+  flex: 1;
 }

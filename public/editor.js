@@ -58,7 +58,24 @@ function btnCompile(e) {
   )
 }
 function btnPaint(e) {
-  window.open(`https://create.clouduboy.org/painter/?pif=`+encodeURIComponent(gameGfx[gameGfx.length-1].pif.replace(/\n+/g, '|').replace(/#/g,'1')))
+  let gfxlist = '<ul class="pixeledit">'+
+    gameGfx.map( (g,i) => {
+      return `<li><button data-id=${i}>${gameGfx[i].svg()}<span>${g.id} (${g.w}x${g.h})</span></button>`
+    }).join('\n')+
+    '<li><button class="close">close</button></li>'+
+    '</ul>'
+   
+  document.body.insertAdjacentHTML('beforeend', gfxlist)
+  document.body.lastElementChild.addEventListener('click', btnPaintSelect)
+}
+
+function btnPaintSelect(e) {
+  if ('id' in e.target.dataset === false) return document.querySelector('.pixeledit').remove()
+
+  let i = parseInt(e.target.dataset.id, 10)
+  let pif = gameGfx[i].pif.replace(/\n+/g, '|').replace(/#/g,'1')
+  
+  window.open(`https://create.clouduboy.org/painter/?pif=`+encodeURIComponent(pif))
 }
 
 function processSrc(src) {
