@@ -1,7 +1,7 @@
 Welcome to the Clouduboy ALPHA
 ==============================
 
-Click `Show` to preview your game, click on `game.js` to edit your game's code!
+Click `Show` to preview your game, click on `games/*.js` to edit view/edit a game's code!
 
 What is Clouduboy? Check the [workshop guide](https://cld.by/workshop).
 

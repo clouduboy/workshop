@@ -58,10 +58,10 @@ game.setup(() => {
   // "Load" (more like create) a sprite (pixelgraphic image)
   // Read more: https://docs.clouduboy.org/sprites
   // gfxFoo = game.loadGraphics(`
-  //   ! foo 3x2
+  //   ! foo 3x3
   //   .#.
   //   #.#
-  //   .#
+  //   .#.
   // `).
 });
 

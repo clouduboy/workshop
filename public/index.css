@@ -53,3 +53,16 @@ header img {
 ul {
   padding: 0;
 }
+
+/* Glitchy Cat link back to the Glitch */
+.glitch {
+  position: absolute;
+  right: 1em;
+  bottom: 0;
+  overflow: hidden;
+}
+
+.glitch img {
+  width: 6em;
+  margin-bottom: -2em;
+}

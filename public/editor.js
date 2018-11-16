@@ -42,6 +42,7 @@ function init() {
   document.body.appendChild(cb)
 
   const pb = document.createElement('button')
+  // TODO: microcanvas gamepad emulation interferes with this
   pb.addEventListener('click', btnPaint)
   pb.className = 'paint'
   pb.textContent = pb. title = 'Edit sprites...'
@@ -73,9 +74,15 @@ function btnPaintSelect(e) {
   if ('id' in e.target.dataset === false) return document.querySelector('.pixeledit').remove()
 
   let i = parseInt(e.target.dataset.id, 10)
-  let pif = gameGfx[i].pif.replace(/\n+/g, '|').replace(/#/g,'1')
+  let pif = gameGfx[i].pif.replace(/\n+/g, '|')
+  let url = `https://create.clouduboy.org/painter/?pif=`+pifInUrl(pif)
   
-  window.open(`https://create.clouduboy.org/painter/?pif=`+encodeURIComponent(pif))
+  console.log(url)
+  window.open(url)
+}
+
+function pifInUrl(pif) {
+  return encodeURIComponent(pif).replace(/[!'()*]/g, c => '%' + c.charCodeAt(0).toString(16) )
 }
 
 function processSrc(src) {
@@ -87,7 +94,7 @@ function processSrc(src) {
 
   gfx.forEach(g => {
     let px = new PixelData(g.replace(/`/g,''))
-    if (px && px.w>1 && px.h>1) {
+    if (px && px.id && px.w > 0 && px.h > 0) {
       gameGfx.push(px)
     }
   })
